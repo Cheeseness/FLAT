@@ -28,9 +28,9 @@ AudioManager::AudioManager()
 
     currentSample = new ALLEGRO_SAMPLE_ID();
 
-    normalMusic = al_load_sample("music/normal.wav");
-    combatMusic = al_load_sample("music/combat.wav");
-    dragonMusic = al_load_sample("music/dragon.wav");
+    normalMusic = al_load_sample("music/normal.ogg");
+    combatMusic = al_load_sample("music/combat.ogg");
+    dragonMusic = al_load_sample("music/dragon.ogg");
 
     //ctor
 }

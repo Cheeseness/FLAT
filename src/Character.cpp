@@ -24,10 +24,10 @@ along with FLAT.  If not, see <http://www.gnu.org/licenses/>.
 Character::Character()
 {
 
-    fireSample = al_load_sample("sfx/zap_2.wav");
-    skateSample = al_load_sample("sfx/enemy_skate.wav");
-    painSample = al_load_sample("sfx/enemy_pain.wav");
-    deathSample = al_load_sample("sfx/enemy_death.wav");
+    fireSample = al_load_sample("sfx/zap_2.ogg");
+    skateSample = al_load_sample("sfx/enemy_skate.ogg");
+    painSample = al_load_sample("sfx/enemy_pain.ogg");
+    deathSample = al_load_sample("sfx/enemy_death.ogg");
 
 	dragon = false;
 

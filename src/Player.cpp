@@ -33,12 +33,12 @@ Player::Player()
 
 	healthBitmap = al_load_bitmap("gfx/health.png");
 
-	skateSound = al_load_sample("sfx/skate.wav");
-	painSounds[0] = al_load_sample("sfx/pain1.wav");
-	painSounds[1] = al_load_sample("sfx/pain2.wav");
-	painSounds[2] = al_load_sample("sfx/pain3.wav");
-	deathSound = al_load_sample("sfx/death.wav");
-	pickupSound = al_load_sample("sfx/pickup.wav");
+	skateSound = al_load_sample("sfx/skate.ogg");
+	painSounds[0] = al_load_sample("sfx/pain1.ogg");
+	painSounds[1] = al_load_sample("sfx/pain2.ogg");
+	painSounds[2] = al_load_sample("sfx/pain3.ogg");
+	deathSound = al_load_sample("sfx/death.ogg");
+	pickupSound = al_load_sample("sfx/pickup.ogg");
 
 	lastDir = 0;
 
@@ -69,7 +69,7 @@ Player::Player()
 	//Setup Weapons:
 
 	//PISTOL
-	pistol = Weapon("gfx/gun.png", "sfx/gun.wav");
+	pistol = Weapon("gfx/gun.png", "sfx/gun.ogg");
 
 	pistol.automatic = false;
 
@@ -100,7 +100,7 @@ Player::Player()
 
 
 	//SHOTGUN
-	shotgun = Weapon("gfx/shotgun.png", "sfx/shotgun.wav");
+	shotgun = Weapon("gfx/shotgun.png", "sfx/shotgun.ogg");
 
 	shotgun.automatic = true;
 
@@ -131,7 +131,7 @@ Player::Player()
 
 
 	//SMG
-	smg = Weapon("gfx/smg.png", "sfx/smg.wav");
+	smg = Weapon("gfx/smg.png", "sfx/smg.ogg");
 
 	smg.automatic = true;
 

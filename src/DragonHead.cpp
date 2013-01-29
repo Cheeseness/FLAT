@@ -25,11 +25,11 @@ DragonHead::DragonHead() {}
 
 DragonHead::DragonHead(DrawStack3D* world3D, vector <Character*> *npc)
 {
-	roar1 = al_load_sample("sfx/dragon_roar_2.wav");
-	roar2 = al_load_sample("sfx/dragon_roar_1.wav");
-	deathSample = al_load_sample("sfx/dragon_death.wav");
-	painSample = al_load_sample("sfx/dragon_pain.wav");
-	ambience = al_load_sample("sfx/dragon_ambience.wav");
+	roar1 = al_load_sample("sfx/dragon_roar_2.ogg");
+	roar2 = al_load_sample("sfx/dragon_roar_1.ogg");
+	deathSample = al_load_sample("sfx/dragon_death.ogg");
+	painSample = al_load_sample("sfx/dragon_pain.ogg");
+	ambience = al_load_sample("sfx/dragon_ambience.ogg");
 
 	splashEnd = al_load_bitmap("gfx/splash_end.png");
 

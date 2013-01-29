@@ -58,7 +58,7 @@ Pickup::Pickup(DrawStack3D* world3D, vec3 _position) {
 	setPrescale(5.0f);
 
     //Start playing the hum silently. We'll increase its volume as we get closer.
-    humSample = al_load_sample("sfx/pickup_spawn.wav");
+    humSample = al_load_sample("sfx/pickup_spawn.ogg");
     al_play_sample(humSample, 1.0f, 0.0f, 1.0f, ALLEGRO_PLAYMODE_ONCE, NULL);
 }
 
