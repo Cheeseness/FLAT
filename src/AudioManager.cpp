@@ -83,7 +83,7 @@ void AudioManager::setAudioCue(ALLEGRO_SAMPLE* newCue)
 	if (!first)
 	{
 		al_stop_sample(currentSample);
-	{
+	}
 	else
 	{
 		first = false;
