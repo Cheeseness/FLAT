@@ -39,10 +39,10 @@ LIBS = -L/usr/local/lib -lallegro -lallegro_ttf -lallegro_audio -lallegro_acodec
 SRCDIR = src
 
 FLAT: $(OBJECTS)
-    $(CC) $(CFLAGS) $(OBJECTS) -o out/FLAT.x86 $(LIBS)
+	$(CC) $(CFLAGS) $(OBJECTS) -o out/FLAT.x86 $(LIBS)
 
 %.o: $(SRCDIR)/%.cpp
-    $(CC) $(CFLAGS) -c $<
+	$(CC) $(CFLAGS) -c $<
 
 clean:
-    rm -rf *.o main
+	rm -rf *.o main
