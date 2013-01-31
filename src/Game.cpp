@@ -286,6 +286,35 @@ int Game::initialize() {
 	return 1;
 }
 
+bool Game::keyrel(int k)
+{
+    /*
+    Checks if a key has been pressed AND released. This means key repeats doesn't affect the input
+    */
+
+    static bool initialized = false;
+    static bool keyp[ALLEGRO_KEY_MAX];
+
+    if (!initialized)
+    {
+        for (int i=0; i<ALLEGRO_KEY_MAX; i++) keyp[i] = false;
+        initialized = 1;
+    }
+
+    if (al_key_down(keyboard_state, key[k]) && !keyp[k])
+    {
+        keyp[k] = 1;
+        return 0;
+    }
+    else if (!al_key_down(keyboard_state, key[k]) && keyp[k])
+    {
+        keyp[k] = 0;
+        return 1;
+    }
+
+    return 0;
+}
+
 void Game::update() {
 
 	if (!splash && end)
@@ -363,7 +392,7 @@ void Game::update() {
         if(al_key_down(keyboard_state, key[KEY_WEAPON3])) {
             player->switchWeapon(2);
         }
-        if(al_key_down(keyboard_state, key[KEY_SWAP_SCENERY])) {
+        if (keyrel(KEY_SWAP_SCENERY)){
             floor->swapScenery();
         }
 

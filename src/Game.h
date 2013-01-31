@@ -155,6 +155,7 @@ class Game
 		float digitalDrag;
 
 		int key[16];
+		bool keyrel(int k);
 
 		void update();
 		void draw();
